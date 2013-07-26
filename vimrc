@@ -35,7 +35,7 @@
 :set fdm=manual
 :set pastetoggle=<F2>
 :set showmode
-:set lines=50 columns=150
+":set lines=50 columns=150
 :set bs=2
 
 :set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
