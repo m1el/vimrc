@@ -56,6 +56,7 @@
 :let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 :setlocal omnifunc=syntaxcomplete#Complete
 
+:let g:project='.'
 :nmap <C-\> :exe 'CommandT' g:project<CR>
 :let g:CommandTClearMap = ['<C-u>', '<C-w>']
 :let g:user_zen_expandabbr_key = '<c-e>'
