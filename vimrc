@@ -39,7 +39,7 @@
 :set fdm=manual
 :set pastetoggle=<F2>
 :set showmode
-:set lines=50 columns=150
+":set lines=50 columns=150
 :set bs=2
 
 :set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
@@ -60,7 +60,7 @@
 :let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 :setlocal omnifunc=syntaxcomplete#Complete
 
-:let g:project = '.'
+:let g:project='.'
 :nmap <C-\> :exe 'CommandT' g:project<CR>
 :let g:CommandTClearMap = ['<C-u>', '<C-w>']
 :let g:CommandTCacheIndexToDisk = 1
