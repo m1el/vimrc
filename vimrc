@@ -1,4 +1,7 @@
-:call pathogen#infect()
+:if !exists('*pathogen#infect')
+: sou ~/.vim/autoload/pathogen.vim
+:endif
+:call pathogen#infect('~/.vim/bundle/{}')
 :filetype plugin indent on
 :syn on
 :set nowrap
@@ -14,6 +17,7 @@
 :hi NonText ctermfg=0
 :colorscheme xoria256
 :set go=egrtL
+:set cpoptions=aABceFsJ
 :helptags ~/.vim/doc
 :set complete=.,b,t,w
 :set hidden
@@ -56,8 +60,10 @@
 :let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 :setlocal omnifunc=syntaxcomplete#Complete
 
+:let g:project = '.'
 :nmap <C-\> :exe 'CommandT' g:project<CR>
 :let g:CommandTClearMap = ['<C-u>', '<C-w>']
+:let g:CommandTCacheIndexToDisk = 1
 :let g:user_zen_expandabbr_key = '<c-e>'
 :let g:use_zen_complete_tag = 1
 
