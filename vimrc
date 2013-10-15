@@ -28,11 +28,13 @@
 
 :au! CursorMoved
 :au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+:au BufWritePost *.sass,*.scss
+\ if exists('b:sass_watch') | silent echo system('touch ' . shellescape(b:sass_watch)) | fi
 :au FileType help set conceallevel=0
 
 :nmap <C-Tab> :bnext<CR>
 :nmap <Esc>[Z :bnext<CR>
-:imap <C-,> <C-Y>,
+:imap <C-e> <C-Y>,
 :set keymap=russian-jcukenwin
 :set ims=-1
 :set imi=0
@@ -60,8 +62,8 @@
 :let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 :setlocal omnifunc=syntaxcomplete#Complete
 
-:let g:project='.'
-:nmap <C-\> :exe 'CommandT' g:project<CR>
+:let b:project='.'
+:nmap <C-\> :exe 'CommandT' b:project<CR>
 :let g:CommandTClearMap = ['<C-u>', '<C-w>']
 :let g:CommandTCacheIndexToDisk = 1
 :let g:user_zen_expandabbr_key = '<c-e>'
