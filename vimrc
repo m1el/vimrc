@@ -23,7 +23,9 @@
 :set gfw=MingLiU:h16
 
 :au! CursorMoved
+:au BufRead *.md set ft=markdown
 :au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+:au FileType python set et sw=2 ts=2
 :au FileType help set conceallevel=0
 
 :nmap <C-Tab> :bnext<CR>
